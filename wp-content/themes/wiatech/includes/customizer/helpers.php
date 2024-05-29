@@ -684,7 +684,7 @@ function themesflat_custom_search_form( $form ) {
         <span class="screen-reader-text">' . esc_html__( 'Search for:' , 'xstar' ) . '</span>
         <input type="search" value="' . get_search_query() . '" name="s" class="s" placeholder="' . esc_html__( "Search…", "xstar" ) . '"/>
     </label>
-    <button type="submit" class="search-submit"><i class="icon-xstar-search"></i></button>    
+    <button type="submit" class="search-submit"><i class="fal fa-search"></i></button>    
     </form>';
  
     return $form;

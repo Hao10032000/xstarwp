@@ -28,7 +28,7 @@ function themesflat_customize_default($key) {
 		'header_absolute'	=> 0,		
 		'header_sidebar_toggler' => 0,
 		'header_button' => 1,
-		'header_button_text' => 'Get Started <i class="icon-xstar-angle-right"></i>',
+		'header_button_text' => '<i class="fas fa-arrow-up"></i> Get In Touch',
 		'header_button_url' => '#',
 		'information_email' => 'support@gmail.com',
 		'information_address' => '55 Main Street, 2nd block, Malborne ,Australia',
@@ -72,7 +72,7 @@ function themesflat_customize_default($key) {
 		'sub_nav_color_hover'	=>	'#E3FF04',
 		'sub_nav_background'=>'#161616',
 		'sub_nav_background_hover'=>'',
-		'sub_nav_border_color' => '#F1F1F1',
+		'sub_nav_border_color' => '#f1f1f10f',
 		'typography_headings'	=> array(
 			'family' => 'Plus Jakarta Sans',
 			'style'  => '600',
@@ -143,7 +143,7 @@ function themesflat_customize_default($key) {
 		'page_title_background_color' => '#161616',
 		'page_title_background_color_opacity' => '100',
 		'page_title_text_color' => '#fff',		
-		'page_title_controls' => array('padding-top' => 220, 'padding-bottom' => 144),
+		'page_title_controls' => array('padding-top' => 235, 'padding-bottom' => 145),
 		'page_title_background_image' => '',
 		'page_title_alignment' => 'center',
 		'page_title_image_size' => 'cover',
@@ -160,10 +160,10 @@ function themesflat_customize_default($key) {
 		'breadcrumb_link_color' => '#fff',
 
 		'typography_buttons' => array(
-			'family' => 'Inter',
-			'style'  => '700',
+			'family' => 'Manrope',
+			'style'  => '400',
 			'size'   => '16',
-			'line_height'=>'19.36px',
+			'line_height'=>'28px',
 		),
 		'typography_pagination'	=> array(
 			'family' => 'Manrope',

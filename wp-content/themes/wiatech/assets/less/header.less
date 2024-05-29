@@ -73,7 +73,7 @@
 // header 01
 
 #header.header-default .inner-header .container {
-    max-width: 1705px;
+    max-width: 1435px;
 }
 
 /* logo */
@@ -155,14 +155,19 @@
     margin-right: 0;
 }
 
-#mainnav>ul>li.menu-item-has-children>a::after {
-    font-family: "xstar";
-    content: "\e93d";
-    font-weight: 900;
-    font-size: 13px;
+#mainnav>ul>li.menu-item-has-children>a::before {
+    content: "\f062";
+    font-family: "FontAwesome";
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.1s ease;
+    transform: rotate(45deg);
+    margin-right: 10px;
     display: inline-block;
-    margin-left: 6px;
-    vertical-align: middle;
+}
+
+#mainnav>ul>li.menu-item-has-children>a:hover::before {
+    transform: rotate(90deg);
 }
 
 #mainnav>ul>li.current-menu-item>a,
@@ -252,11 +257,11 @@ header .flat-information li a,
 #mainnav-mobi ul li .current-menu-item>a,
 #mainnav-mobi ul li.current-menu-item .btn-submenu:before,
 #mainnav-mobi ul li .current-menu-item .btn-submenu:before {
-    color: #1C1C1E;
+    color: #FFFFFF;
 }
 
 .header-modal-menu-left-btn .modal-menu-left-btn .line {
-    background: var(--theme-primary-color);
+    background: #FFFFFF;
 }
 
 #mainnav ul.sub-menu>li>a:hover {
@@ -380,7 +385,6 @@ header .flat-information li a,
 
 #mainnav ul.sub-menu>li a:hover,
 #mainnav ul.sub-menu>li.current-menu-item a {
-    background: #f5f5f5;
     padding-left: 25px;
     color: var(--theme-primary-color);
 }
@@ -427,7 +431,7 @@ header .flat-information li a,
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     position: fixed;
-    background-color: #fff;
+    background-color: #1b1b1b;
     z-index: 999999;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -513,7 +517,7 @@ header .flat-information li a,
 }
 
 #header .inner-canvas-nav .group-header-logo {
-    background: #FFF;
+    background: #1b1b1b;
     box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.08);
     padding: 12px 20px;
     border: unset;
@@ -544,7 +548,7 @@ header .flat-information li a,
 
 #header .inner-canvas-nav .bottom-canvas-nav {
     padding: 20px 20px 20px 20px;
-    background: #FFF;
+    background: #1b1b1b;
 }
 
 #mainnav_canvas,
@@ -597,7 +601,7 @@ header .flat-information li a,
     height: auto;
     padding: 10px 50px 10px 0px;
     text-align: left;
-    color: #1C1C1E;
+    color: #FFFFFF;
 }
 
 #mainnav_canvas ul li a>span {
@@ -676,6 +680,7 @@ header .block a,
     -ms-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    text-transform: uppercase;
 }
 
 /* Header Absolute */
@@ -883,7 +888,7 @@ header .block a,
     display: inline-block;
     border-style: solid;
     border-width: 0 1px 1px 0;
-    border-color: transparent #000000 #000000 transparent;
+    border-color: transparent #fff #fff transparent;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -903,33 +908,37 @@ header .block a,
 
 header .header-infor-phone {
     font-family: Inter;
+    letter-spacing: -0.05em;
     font-size: 18px;
     font-weight: 600;
-    line-height: 21.78px;
-    letter-spacing: -0.03em;
-    color: #222222;
-    & i {
-        color: #d2a98e;
-        margin-right: 11px;
-        font-size: 25px;
-        vertical-align: bottom;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 30px;
+
+    & .icon {
+        color: var(--theme-primary-color);
     }
 }
 
 #header.header-default.style-absolute {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
     & .inner-header .container {
         max-width: 1802px;
     }
+
     & .header-infor-phone {
         & i {
             color: var(--theme-primary-color);
         }
     }
+
     & .header-modal-menu-left-btn {
         margin-left: 50px;
         column-gap: 15px;
-        & > span {
+
+        &>span {
             font-family: 'Inter';
             font-size: 16px;
             font-weight: 600;
@@ -942,13 +951,16 @@ header .header-infor-phone {
             -ms-transition: all 0.3s ease 0s;
             -o-transition: all 0.3s ease 0s;
             transition: all 0.3s ease 0s;
+
             &:hover {
                 color: var(--theme-primary-color);
             }
         }
     }
-    & #mainnav > ul > li > a {
+
+    & #mainnav>ul>li>a {
         position: relative;
+
         &::before {
             content: '';
             height: 1px;
@@ -967,15 +979,17 @@ header .header-infor-phone {
             -o-transition: all 0.3s ease 0s;
             transition: all 0.3s ease 0s;
         }
+
         &:hover::before {
             width: 100%;
             visibility: visible;
             opacity: 1;
         }
     }
-    & #mainnav > ul > li > a:hover,
-    & #mainnav > ul > li.current-menu-parent > a,
-    & #mainnav > ul > li.current-menu-item > a {
+
+    & #mainnav>ul>li>a:hover,
+    & #mainnav>ul>li.current-menu-parent>a,
+    & #mainnav>ul>li.current-menu-item>a {
         width: 100%;
         visibility: visible;
         opacity: 1;
@@ -985,9 +999,11 @@ header .header-infor-phone {
 #header.header-02 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-left: 58px;
+
     & .inner-header .container {
         max-width: 1802px;
     }
+
     & .header-modal-menu-left-btn {
         margin-left: 0;
         column-gap: 15px;
@@ -995,7 +1011,8 @@ header .header-infor-phone {
         background: var(--theme-primary-color);
         padding: 0 51px;
         margin-right: -12px;
-        & > span {
+
+        &>span {
             font-family: 'Inter';
             font-size: 16px;
             font-weight: 600;
@@ -1009,16 +1026,19 @@ header .header-infor-phone {
             -o-transition: all 0.3s ease 0s;
             transition: all 0.3s ease 0s;
         }
+
         & .line {
             background: #fff;
         }
     }
+
     & .show-search {
         border-left: 1px solid rgba(255, 255, 255, 0.2);
         padding: 0 40px;
         font-size: 18px;
         margin-left: 40px;
     }
+
     & .inner-center .nav-wrap {
         background: #fff;
         padding: 3px 50px;

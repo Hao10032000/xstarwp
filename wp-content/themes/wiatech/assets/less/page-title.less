@@ -18,8 +18,13 @@
     text-align: center;
 	vertical-align: middle;
 	margin: 0 10px;
-	font-size: 15px;
+	font-size: 16px;
 }
+.breadcrumbs span.sep i {
+   rotate: 45deg;
+   color: #fff;
+}
+
 
 .breadcrumbs span a,
 .breadcrumbs a,
@@ -30,10 +35,6 @@
 	font-weight: 500;
 }
 
-.breadcrumbs span a:hover,
-.breadcrumbs a:hover {
-	text-decoration: underline;
-}
 
 .breadcrumbs .trail-end span {
 	text-transform: capitalize;
@@ -45,6 +46,7 @@
     -ms-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+	text-transform: uppercase;
 }
 
 /* Style1 */
@@ -60,11 +62,17 @@
 .page-title.left .breadcrumbs {
 	text-align: left;
 }
-
+.page-title.center .breadcrumbs .trail-items {
+    display: inline-flex;
+    padding: 6px 18px 3px 18px;
+    border: 1px solid #bebebe;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+}
 .page-title.center .page-title-container h1,
 .page-title.center .breadcrumbs {
     text-align: center;
-    margin-bottom: 19px;
 }
 
 .page-title.right .page-title-container h1,
@@ -73,7 +81,7 @@
 }
 
 .page-title.default .page-title-heading {
-	margin-bottom: 19px;
+	margin-bottom: 24px;
 }
 
 .page-title.inline .page-title-container {

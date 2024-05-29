@@ -18,7 +18,7 @@ $wp_customize->add_control( new themesflat_RadioImages($wp_customize,
         'choices'   => array (
             'header-default' => array (
                 'tooltip'   => esc_html__( 'Header Default','xstar' ),
-                'src'       => THEMESFLAT_LINK . 'images/header-default.jpg'
+                'src'       => THEMESFLAT_LINK . 'images/header-default.png'
             ),
             'header-02' => array (
                 'tooltip'   => esc_html__( 'Header 02','xstar' ),
