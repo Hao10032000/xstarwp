@@ -96,11 +96,6 @@ $topbar_social = themesflat_get_opt('topbar_social');
                             ?>
                         </div>
                         <?php endif;?>
-                        <?php if ( $topbar_social == 1 ) :?>
-                        <div class="topbar-social">
-                            <?php themesflat_render_social();   ?>
-                        </div>
-                        <?php endif;?>
                     </div>
                     <?php endif;?>
                 </div>
