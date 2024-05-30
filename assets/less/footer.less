@@ -1,0 +1,320 @@
+/* Footer
+-------------------------------------------------------------- */
+.footer_background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  background: #020626;
+}
+
+.footer-divide {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overlay-footer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+#footer {
+  position: relative;
+  z-index: 10;
+}
+
+.footer-navigation {
+  position: relative;
+  z-index: 10;
+}
+
+.footer-widgets {
+  & .wrap-widgets.wrap-widgets-1 {
+    padding-right: 38px;
+
+    .custom-text-footer {
+      p {
+        margin-top: 28px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  & .wrap-widgets.wrap-widgets-2 {
+    margin-left: 76px;
+  }
+
+  & .wrap-widgets.wrap-widgets-3 {
+    margin-left: 38px;
+  }
+
+  & .wrap-widgets.wrap-widgets-4 {
+    .wp-widget-group__inner-blocks p {
+      margin-top: 29px;
+      margin-bottom: 28px;
+    }
+
+    .form-footer {
+      border: 1px solid #454750;
+      border-radius: 4px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &>input {
+        background-color: transparent;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        padding: 13px 24px;
+        margin-bottom: 0;
+        &::placeholder{
+          color: #bebebe;
+          font-size: 16px;
+        }
+      }
+      .btn-footer{
+        position: relative;
+        display: inline-flex;
+        &>input{
+          border-radius: 3px;
+          background: transparent;
+          padding: 11px 26px;
+          z-index: 1;
+        }
+        .icon {
+          position: absolute;
+          background: var(--theme-primary-color);
+          border-radius: 3px;
+          top: 0;
+          right: 0;
+          padding: 11px 13px;
+          z-index: 0;
+      }
+      }
+    }
+  }
+}
+
+/* Footer Navigation
+  -------------------------------------------------------------- */
+
+.footer-navigation {
+  padding: 78.5px 0;
+
+  & .wrap-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & .themesflat-socials {
+    display: flex;
+    align-items: center;
+    column-gap: 65px;
+    row-gap: 10px;
+
+    & a {
+      color: #fff;
+
+      &:hover {
+        color: #086AD8;
+      }
+
+      &::after {
+        content: attr(title);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: capitalize;
+      }
+
+      & i {
+        color: #D2A98E;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+/* Bottom
+  -------------------------------------------------------------- */
+.bottom {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 26px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+
+// Custom HTML footer
+
+.custom-text-footer {
+  margin-bottom: 61px;
+
+  & h3 {
+    font-family: 'Inter';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.73px;
+    letter-spacing: -0.03em;
+    margin-bottom: 23px;
+
+    & span {
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+  & p {
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
+.ft-mailchimp-form {
+  &>p {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.55);
+
+    & a {
+      color: #fff;
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--theme-primary-color);
+      }
+    }
+  }
+
+  & .group-form-ip {
+    position: relative;
+    .flex-center;
+
+    &>i {
+      .absolute-center-y;
+      left: 25px;
+      font-size: 12px;
+    }
+
+    & input {
+      margin: 0;
+      border: 1.2px solid #FFFFFF1A;
+      background: #FFFFFF08;
+      padding-left: 49px;
+      font-family: 'Manrope';
+      font-size: 12px;
+      font-weight: 400;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.55);
+      }
+    }
+
+    & button {
+      padding: 18.5px 34px 18.5px 39px;
+      border-radius: 12px;
+      font-family: 'Inter';
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 19.36px;
+      margin-left: 30px;
+
+      & i {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.custom-text-footer-2 {
+  & .infor {
+    margin-bottom: 26px;
+
+    & .title {
+      font-family: 'Inter';
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21.78px;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 25px;
+    }
+
+    & p {
+      font-family: 'Manrope';
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 35px;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    & a {
+      font-family: 'Manrope';
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 45px;
+
+      &:hover {
+        color: var(--theme-primary-color);
+      }
+    }
+  }
+}
+
+// footer menu
+
+#footer {
+  & .widget_nav_menu {
+    li a {
+      font-family: 'Manrope';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 48px;
+      color: #bebebe;
+      position: relative;
+
+      &:hover {
+        color: var(--theme-primary-color);
+      }
+
+      &::before {
+        content: "\f101";
+        font-family: "FontAwesome";
+        margin-right: 7px;
+
+
+      }
+
+    }
+  }
+}
+
+// Footer widget title
+
+footer .widget .widget-title,
+footer .widget h2,
+footer .wp-block-search .wp-block-search__label {
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  position: relative;
+
+  &::after {
+    width: 83px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(227, 255, 4, 1), rgba(22, 22, 22, 1));
+    content: '';
+    left: 0;
+    bottom: 0;
+    position: absolute;
+  }
+}
