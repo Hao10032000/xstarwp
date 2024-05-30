@@ -6,6 +6,7 @@
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
+    border-bottom: 1px solid #454750;
 }
 
 .header-sticky {
@@ -201,6 +202,7 @@
 
 /* submenu */
 #mainnav ul.sub-menu {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 0;
     text-align: left;
     position: absolute;
@@ -348,8 +350,9 @@ header .flat-information li a,
 }
 
 #mainnav ul.sub-menu li.menu-item-has-children>a::before {
-    font-family: "xstar";
-    content: "\e93d";
+    content: "\f062";
+    font-family: "FontAwesome";
+    rotate: 45deg;
     right: 20px;
     line-height: normal;
     font-size: 14px;
@@ -364,24 +367,6 @@ header .flat-information li a,
     display: none;
 }
 
-#mainnav ul.sub-menu>li>a::after {
-    content: "";
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--theme-primary-color);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10px;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
 
 #mainnav ul.sub-menu>li a:hover,
 #mainnav ul.sub-menu>li.current-menu-item a {
@@ -393,10 +378,6 @@ header .flat-information li a,
 #mainnav ul.sub-menu>li.current-menu-item>a::after {
     opacity: 1;
     visibility: visible;
-}
-
-#mainnav ul.sub-menu>li.sub-parent:hover::after {
-    right: 18px;
 }
 
 #mainnav>ul>li.home>a:before {

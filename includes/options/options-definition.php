@@ -206,7 +206,7 @@ function themesflat_customize_default($key) {
 		'site_logo_ft'	=> THEMESFLAT_LINK . 'images/logo.png',
 		'logo_controls_ft' => array('padding-top' => '','padding-bottom' => ''),
 		'logo_width_ft' => 197,
-		'footer_controls' => array('padding-top' => 100, 'padding-bottom' => 22),
+		'footer_controls' => array('padding-top' => 100, 'padding-bottom' => 90),
 		'footer1' => 'footer-1',
 		'footer2' => 'footer-2',
 		'footer3' => 'footer-3',

@@ -501,7 +501,7 @@ function themesflat_preload_hook(){
     // Go Top
     if ( themesflat_get_opt( 'go_top') == 1 ) : ?>
         <div class="go-top">
-            <i class="icon-xstar-angle-up"></i>
+            <i class="fas fa-arrow-up"></i>
         </div>
     <?php endif;
 

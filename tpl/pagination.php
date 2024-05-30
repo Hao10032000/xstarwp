@@ -27,8 +27,8 @@ $links = paginate_links( array(
 	'current'  => $paged,
 	'mid_size' => 1,
 	'add_args' => array_map( 'urlencode', $query_args ),
-	'prev_text' => ( '<i class="icon-xstar-angle-left"></i>' ),
-	'next_text' => ( '<i class="icon-xstar-angle-right"></i>' ),
+	'prev_text' => ( '<i class="fas fa-arrow-left"></i>' ),
+	'next_text' => ( '<i class="fas fa-arrow-right"></i>' ),
 ) );
 
 $numeric_links = paginate_links( array(

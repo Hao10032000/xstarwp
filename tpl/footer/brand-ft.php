@@ -6,7 +6,7 @@ if ( $logo_site ) : ?>
         <div id="logo-footer" >                  
             <a href="<?php echo esc_url( home_url('/') ); ?>"  title="<?php bloginfo('name'); ?>">
                 <?php if  (!empty($logo_site)) { ?>
-                    <img class="site-logo" width="169" height="32" src="<?php echo esc_url($logo_site); ?>" alt="<?php bloginfo('name'); ?>"/>
+                    <img class="site-logo" width="159" height="32" src="<?php echo esc_url($logo_site); ?>" alt="<?php bloginfo('name'); ?>"/>
                 <?php } ?>
             </a>
         </div>
