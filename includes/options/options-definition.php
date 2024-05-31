@@ -7,7 +7,7 @@
 
 function themesflat_customize_default($key) {
 	$default = array(
-		'social_links'	=> array ("facebook" => '#', "twitter" => '#', "linkedin"  => '#', "instagram" => '#'),
+		'social_links'	=> array ("facebook" => '#', "twitter" => '#', "linkedin"  => '#'),
 		'show_social_share' => 0,		
 		'social_footer' => 0,
 		'enable_less' => 1,
@@ -144,6 +144,8 @@ function themesflat_customize_default($key) {
 		'page_title_background_color_opacity' => '100',
 		'page_title_text_color' => '#fff',		
 		'page_title_controls' => array('padding-top' => 216, 'padding-bottom' => 145),
+		'page_title_shape1'=> THEMESFLAT_LINK . 'images/shape1.png',
+		'page_title_shape2'=> THEMESFLAT_LINK . 'images/shape2.png',
 		'page_title_background_image' => '',
 		'page_title_alignment' => 'center',
 		'page_title_image_size' => 'cover',
@@ -262,6 +264,18 @@ function themesflat_customize_default($key) {
 		'team_slug' => '',
 		'team_name' => '',
 		'team_featured_title' => 'Team Details',
+
+		'action_box_background_color' => '',
+        'action_box_heading_color' => '',
+        'action_box_text_color'	=> '#fff',
+        'action_box_button_background_color_text'	=> '',
+        'action_box_button_text_color' => '',
+        'action_box_button_background_color' => '',
+		'action_box_button_text' => '',
+		'action_box_button_url' => '#',
+		'action_box_text' => 'LET’S TALK!',
+		'show_action_box'=>'',
+		'action_box_button_image'=>'',
 
 	);
 	return $default[$key];

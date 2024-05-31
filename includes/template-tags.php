@@ -85,6 +85,43 @@ if ( ! function_exists( 'themesflat_post_navigation' ) ) :
 		?>
 		<nav class="navigation posts-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'xstar' ); ?></h2>
+			<ul class="nav-links-next-prev clearfix">
+				<?php
+				if ( is_attachment() ) :
+	
+					$prevPost = get_adjacent_post( false, '', true);
+					if( is_object( $prevPost ) ){
+						$prev_title = get_the_title($prevPost->ID);
+						$prev = esc_html__( 'Previous', 'xstar' );
+					}
+					echo '<li class="post-navigation previous-post">';
+							previous_post_link('<div class="title-post"><i class="fas fa-arrow-left"></i> %link</div>', $prev); 
+					echo '</li>';
+				else :
+	
+					$prevPost = get_adjacent_post( false, '', true);
+					if( is_object( $prevPost ) ){
+						$prev_title = get_the_title($prevPost->ID);
+						$prev = esc_html__( 'Previous', 'xstar' );
+	
+						echo '<li class="post-navigation previous-post">';
+								previous_post_link('<div class="title-post"><i class="fas fa-arrow-left"></i> %link</div>', $prev); 
+						echo '</li>';
+					}
+	
+					$nextPost = get_adjacent_post( false, '', false);
+					if( is_object( $nextPost ) ){
+						$next_title = get_the_title($nextPost->ID);
+						$next = esc_html__( 'Next post', 'xstar' );
+						echo '<li class="post-navigation next-post">';
+								previous_post_link('<div class="title-post"> %link <i class="fas fa-arrow-right"></i></div>', $next); 
+						echo '</li>';
+					}
+					
+				endif;
+				?>
+			</ul><!-- .nav-links --> 
+
 			<ul class="nav-links clearfix">
 				<?php
 				if ( is_attachment() ) :
@@ -127,12 +164,12 @@ if ( ! function_exists( 'themesflat_post_navigation' ) ) :
 						$next_title = get_the_title($nextPost->ID);
 						$next = esc_html__( 'next post', 'xstar' );
 						$date = get_the_date();
-						echo '<li class="post-navigation next-post">';
+						echo '<li class="post-navigation previous-post">';
+							 previous_post_link('<div class="thump-post">%link</div>', $nextthumbnail); 
 							echo '<div class="content">';
-							next_post_link('<div class="post-button next-button">%link</div>', $date); 
-								next_post_link('<div class="title-post">%link</div>', $next_title); 
+								previous_post_link('<div class="post-button prev-button">%link</div>', $date); 
+								previous_post_link('<div class="title-post">%link</div>', $next_title); 
 							echo '</div>';
-							next_post_link('<div class="thump-post">%link</div>', $nextthumbnail); 
 						echo '</li>';
 					}
 					

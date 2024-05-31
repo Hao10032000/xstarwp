@@ -75,36 +75,49 @@ function themesflat_render_box_control($name,$control=array(),$id='') {
     }
     $controls = array_merge($default,$controls);
     ?>
-    <div class="themesflat_box_control">
-        <div class="themesflat_box_position">
-            <div class="themesflat_box_margin">
-                <label class="themesflat_box_label"><?php echo esc_html('Margin');?></label>
-                <input placeholder="-" data-position='margin-top' value ="<?php  echo esc_attr(($controls['margin-top']));?>" class="top" type="text"/>
-                <input placeholder="-" data-position='margin-bottom' value ="<?php  echo esc_attr(($controls['margin-bottom']));?>" class="bottom" type="text"/>
-                <input placeholder="-" data-position='margin-left' value ="<?php  echo esc_attr(($controls['margin-left']));?>" class="left" type="text"/>
-                <input placeholder="-" data-position='margin-right' value ="<?php  echo esc_attr(($controls['margin-right']));?>" class="right" type="text"/>
-            </div>
-
-            <div class="themesflat_box_padding">
-                <label class="themesflat_box_label"><?php echo esc_html('Padding');?></label>
-                <input placeholder="-" data-position='padding-top' value ="<?php  echo esc_attr(($controls['padding-top']));?>" class="top" type="text"/>
-                <input placeholder="-" data-position='padding-bottom' value ="<?php  echo esc_attr(($controls['padding-bottom']));?>" class="bottom" type="text"/>
-                <input placeholder="-" data-position='padding-left' value ="<?php  echo esc_attr(($controls['padding-left']));?>" class="left" type="text"/>
-                <input placeholder="-" data-position='padding-right' value ="<?php  echo esc_attr(($controls['padding-right']));?>" class="right" type="text"/>
-            </div>
-
-            <div class="themesflat_box_border">
-                <label class="themesflat_box_label"><?php echo esc_html('Border');?></label>
-                <input placeholder="-" data-position='border-top-width' value ="<?php  echo esc_attr(($controls['border-top-width']));?>" class="top" type="text"/>
-                <input placeholder="-" data-position='border-bottom-width' value ="<?php  echo esc_attr(($controls['border-bottom-width']));?>" class="bottom" type="text"/>
-                <input placeholder="-" data-position='border-left-width' value ="<?php  echo esc_attr(($controls['border-left-width']));?>" class="left" type="text"/>
-                <input placeholder="-" data-position='border-right-width' value ="<?php  echo esc_attr(($controls['border-right-width']));?>" class="right" type="text"/>
-            </div>
-            <div class="themesflat_control_logo"></div>
+<div class="themesflat_box_control">
+    <div class="themesflat_box_position">
+        <div class="themesflat_box_margin">
+            <label class="themesflat_box_label"><?php echo esc_html('Margin');?></label>
+            <input placeholder="-" data-position='margin-top' value="<?php  echo esc_attr(($controls['margin-top']));?>"
+                class="top" type="text" />
+            <input placeholder="-" data-position='margin-bottom'
+                value="<?php  echo esc_attr(($controls['margin-bottom']));?>" class="bottom" type="text" />
+            <input placeholder="-" data-position='margin-left'
+                value="<?php  echo esc_attr(($controls['margin-left']));?>" class="left" type="text" />
+            <input placeholder="-" data-position='margin-right'
+                value="<?php  echo esc_attr(($controls['margin-right']));?>" class="right" type="text" />
         </div>
+
+        <div class="themesflat_box_padding">
+            <label class="themesflat_box_label"><?php echo esc_html('Padding');?></label>
+            <input placeholder="-" data-position='padding-top'
+                value="<?php  echo esc_attr(($controls['padding-top']));?>" class="top" type="text" />
+            <input placeholder="-" data-position='padding-bottom'
+                value="<?php  echo esc_attr(($controls['padding-bottom']));?>" class="bottom" type="text" />
+            <input placeholder="-" data-position='padding-left'
+                value="<?php  echo esc_attr(($controls['padding-left']));?>" class="left" type="text" />
+            <input placeholder="-" data-position='padding-right'
+                value="<?php  echo esc_attr(($controls['padding-right']));?>" class="right" type="text" />
+        </div>
+
+        <div class="themesflat_box_border">
+            <label class="themesflat_box_label"><?php echo esc_html('Border');?></label>
+            <input placeholder="-" data-position='border-top-width'
+                value="<?php  echo esc_attr(($controls['border-top-width']));?>" class="top" type="text" />
+            <input placeholder="-" data-position='border-bottom-width'
+                value="<?php  echo esc_attr(($controls['border-bottom-width']));?>" class="bottom" type="text" />
+            <input placeholder="-" data-position='border-left-width'
+                value="<?php  echo esc_attr(($controls['border-left-width']));?>" class="left" type="text" />
+            <input placeholder="-" data-position='border-right-width'
+                value="<?php  echo esc_attr(($controls['border-right-width']));?>" class="right" type="text" />
+        </div>
+        <div class="themesflat_control_logo"></div>
     </div>
-    <input name="<?php echo esc_attr($name);?>" data-customize-setting-link="<?php echo  esc_attr($id);?>" value="<?php echo esc_attr(json_encode($controls));?>" type="hidden"/>
-    <?php 
+</div>
+<input name="<?php echo esc_attr($name);?>" data-customize-setting-link="<?php echo  esc_attr($id);?>"
+    value="<?php echo esc_attr(json_encode($controls));?>" type="hidden" />
+<?php 
 }
 
 function themesflat_color_picker_control($title,$control) { 
@@ -174,23 +187,23 @@ function themesflat_special_excerpt($length) {
 
 function themesflat_available_social_icons() {
     $icons = apply_filters( 'themesflat_available_icons', array(
-        'twitter'        => array( 'iclass' => 'icon-xstar-twitter', 'title' => 'Twitter','share_link' => THEMESFLAT_PROTOCOL . '://twitter.com/intent/tweet?url=' ),
-        'facebook'       => array( 'iclass' => 'icon-xstar-facebook', 'title' => 'Facebook','share_link'=> THEMESFLAT_PROTOCOL . '://www.facebook.com/sharer/sharer.php?u=' ),
-        'google-plus-g'    => array( 'iclass' => 'icon-xstar-google-plus', 'title' => 'Google Plus','share_link'=> THEMESFLAT_PROTOCOL . '://plus.google.com/share?url=' ),
-        'pinterest'      => array( 'iclass' => 'icon-xstar-pinterest', 'title' => 'Pinterest','share_link' => THEMESFLAT_PROTOCOL . '://pinterest.com/pin/create/bookmarklet/?url=' ),
-        'instagram'      => array( 'iclass' => 'icon-xstar-instagram', 'title' => 'Instagram','share_link' => 'https://www.instagram.com/?url=' ),
-        'youtube'        => array( 'iclass' => 'icon-xstar-youtube', 'title' => 'Youtube','share_link' =>'' ),
-        'vimeo'          => array( 'iclass' => 'icon-xstar-vimeo', 'title' => 'Vimeo','share_link' =>'' ),
-        'behance'        => array( 'iclass' => 'icon-xstar-behance', 'title' => 'Behance','share_link' =>'' ),
-        'bitcoin'        => array( 'iclass' => 'icon-xstar-bitcoin', 'title' => 'Bitcoin','share_link' =>'' ),
-        'digg'           => array( 'iclass' => 'icon-xstar-digg', 'title' => 'Digg','share_link' =>'http://digg.com/submit?url=' ),
-        'skype'          => array( 'iclass' => 'icon-xstar-skype', 'title' => 'Skype','share_link' => THEMESFLAT_PROTOCOL . '://web.skype.com/share?url='),
-        'slack'          => array( 'iclass' => 'icon-xstar-slack', 'title' => 'Slack','share_link' => ''),
-        'spotify'        => array( 'iclass' => 'icon-xstar-spotify', 'title' => 'Spotify','share_link' => ''),
-        'stack-overflow' => array( 'iclass' => 'icon-xstar-stack-overflow', 'title' => 'Stack Overflow','share_link' => ''),
-        'steam'          => array( 'iclass' => 'icon-xstar-steam', 'title' => 'Steam','share_link' => ''),
-        'dribble'          => array( 'iclass' => 'icon-xstar-dribble', 'title' => 'Dribble','share_link' => ''),
-        'linkedin'          => array( 'iclass' => 'icon-xstar-linkedin', 'title' => 'Linkedin','share_link' => ''),
+        'twitter'        => array( 'iclass' => 'fa-brands fa-x-twitter', 'title' => 'Twitter','share_link' => THEMESFLAT_PROTOCOL . '://twitter.com/intent/tweet?url=' ),
+        'facebook'       => array( 'iclass' => 'fa-brands fa-facebook-f', 'title' => 'Facebook','share_link'=> THEMESFLAT_PROTOCOL . '://www.facebook.com/sharer/sharer.php?u=' ),
+        'google-plus-g'    => array( 'iclass' => 'fa-brands fa-google-plus-g', 'title' => 'Google Plus','share_link'=> THEMESFLAT_PROTOCOL . '://plus.google.com/share?url=' ),
+        'pinterest'      => array( 'iclass' => 'fa-brands fa-pinterest-p', 'title' => 'Pinterest','share_link' => THEMESFLAT_PROTOCOL . '://pinterest.com/pin/create/bookmarklet/?url=' ),
+        'instagram'      => array( 'iclass' => 'fa-brands fa-instagram', 'title' => 'Instagram','share_link' => 'https://www.instagram.com/?url=' ),
+        'youtube'        => array( 'iclass' => 'fa-brands fa-youtube', 'title' => 'Youtube','share_link' =>'' ),
+        'vimeo'          => array( 'iclass' => 'class="fa-brands fa-vimeo-v', 'title' => 'Vimeo','share_link' =>'' ),
+        'behance'        => array( 'iclass' => 'class="fa-brands fa-behance', 'title' => 'Behance','share_link' =>'' ),
+        'bitcoin'        => array( 'iclass' => 'class="fa-brands fa-bitcoin', 'title' => 'Bitcoin','share_link' =>'' ),
+        'digg'           => array( 'iclass' => 'class="fa-brands fa-digg', 'title' => 'Digg','share_link' =>'http://digg.com/submit?url=' ),
+        'skype'          => array( 'iclass' => 'fa-brands fa-skype', 'title' => 'Skype','share_link' => THEMESFLAT_PROTOCOL . '://web.skype.com/share?url='),
+        'slack'          => array( 'iclass' => 'fa-brands fa-slack', 'title' => 'Slack','share_link' => ''),
+        'spotify'        => array( 'iclass' => 'fa-brands fa-spotify', 'title' => 'Spotify','share_link' => ''),
+        'stack-overflow' => array( 'iclass' => 'fa-brands fa-stack-overflow', 'title' => 'Stack Overflow','share_link' => ''),
+        'steam'          => array( 'iclass' => 'fa-brands fa-steam', 'title' => 'Steam','share_link' => ''),
+        'dribble'          => array( 'iclass' => 'fa-solid fa-basketball', 'title' => 'Dribble','share_link' => ''),
+        'linkedin'          => array( 'iclass' => 'fa-brands fa-linkedin-in', 'title' => 'Linkedin','share_link' => ''),
     ) );
 
     $icons['__ordering__'] = array_keys( $icons );
@@ -312,8 +325,8 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
     if ( ! function_exists( '_wp_render_title_tag' ) ) {
         function themesflat_render_title() {
             ?>
-            <title><?php wp_title( '|', true, 'right' ); ?></title>
-            <?php
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+<?php
         }
         add_action( 'wp_head', 'themesflat_render_title' );
     }
@@ -463,8 +476,8 @@ function themesflat_render_social($prefix = '',$value='',$show_title=false) {
     $icons = themesflat_available_social_icons();
 
     ?>
-    <ul class="<?php echo esc_attr(implode(" ", $class));?>">
-        <?php
+<ul class="<?php echo esc_attr(implode(" ", $class));?>">
+    <?php
         foreach ( $value as $key => $val ) {
             if ($key != '__ordering__') {
                 $title = ($show_title == false ? '' : $icons[$key]['title']);
@@ -483,34 +496,37 @@ function themesflat_render_social($prefix = '',$value='',$show_title=false) {
             }
     }
         ?>
-    </ul><!-- /.social -->       
-    <?php 
+</ul><!-- /.social -->
+<?php 
 }
 
 function themesflat_preload_hook(){
     
     // Preloader
     if (themesflat_get_opt('enable_preload') == 1): ?>
-        <div id="preloader">
-            <div class="row loader">
-                <div class="pulse-loader"><div class="double-bounce3"></div><div class="double-bounce4"></div></div>
-            </div>
+<div id="preloader">
+    <div class="row loader">
+        <div class="pulse-loader">
+            <div class="double-bounce3"></div>
+            <div class="double-bounce4"></div>
         </div>
-    <?php endif;
+    </div>
+</div>
+<?php endif;
 
     // Go Top
     if ( themesflat_get_opt( 'go_top') == 1 ) : ?>
-        <div class="go-top">
-            <i class="fas fa-arrow-up"></i>
-        </div>
-    <?php endif;
+<div class="go-top">
+    <i class="fas fa-arrow-up"></i>
+</div>
+<?php endif;
 
     get_template_part( 'tpl/header/aside-toggler');
 
     if ( themesflat_get_opt( 'animation_cursor') == 1 ) : ?>
-        <div class="tfmouseCursor cursor-outer"></div>
-        <div class="tfmouseCursor cursor-inner"></div>
-    <?php endif;
+<div class="tfmouseCursor cursor-outer"></div>
+<div class="tfmouseCursor cursor-inner"></div>
+<?php endif;
     
 }
 add_action( 'wp_body_open', 'themesflat_preload_hook' );
@@ -696,17 +712,25 @@ function themesflat_social_single() {
         $value = themesflat_get_json('social_links');
         $sharelink = themesflat_available_social_icons();
         ?>
-        <div class="social-share-article">
-        <h5>Share</h5>
-            <ul class="themesflat-socials">
-                <?php
+<div class="social-share-article">
+    <h5>Share</h5>
+    <div class="icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M15.5471 14.7982C14.493 14.7982 13.5433 15.2534 12.8842 15.9775L6.95572 12.3057C7.11849 11.8896 7.20194 11.4467 7.20176 11C7.20197 10.5532 7.11852 10.1103 6.95572 9.69429L12.8842 6.02232C13.5434 6.74642 14.493 7.20181 15.5471 7.20181C17.5327 7.20181 19.1481 5.58644 19.1481 3.60082C19.1481 1.61519 17.5327 0 15.5471 0C13.5615 0 11.9461 1.61536 11.9461 3.60099C11.9461 4.04774 12.0295 4.49056 12.1922 4.90663L6.26384 8.57848C5.6047 7.85437 4.65505 7.39899 3.60099 7.39899C1.61536 7.39899 0 9.01453 0 11C0 12.9856 1.61536 14.601 3.60099 14.601C4.65501 14.601 5.60475 14.1458 6.26384 13.4215L12.1922 17.0933C12.0295 17.5094 11.9461 17.9523 11.9461 18.3991C11.9461 20.3846 13.5615 22 15.5471 22C17.5327 22 19.1481 20.3846 19.1481 18.3992C19.1481 16.4135 17.5327 14.7982 15.5471 14.7982ZM13.2592 3.60099C13.2592 2.33943 14.2856 1.31308 15.5471 1.31308C16.8086 1.31308 17.835 2.33943 17.835 3.60099C17.835 4.86255 16.8087 5.8889 15.5471 5.8889C14.2855 5.8889 13.2592 4.86251 13.2592 3.60099ZM3.60099 13.2879C2.33926 13.2879 1.31291 12.2615 1.31291 11C1.31291 9.73846 2.33926 8.71207 3.60099 8.71207C4.86255 8.71207 5.88873 9.73846 5.88873 11C5.88873 12.2615 4.86251 13.2879 3.60099 13.2879ZM13.2592 18.399C13.2592 17.1375 14.2856 16.1111 15.5471 16.1111C16.8086 16.1111 17.835 17.1375 17.835 18.399C17.835 19.6605 16.8087 20.6869 15.5471 20.6869C14.2855 20.6869 13.2592 19.6605 13.2592 18.399V18.399Z"
+                fill="currentColor">
+            </path>
+        </svg>
+    </div>
+    <ul class="themesflat-socials">
+        <?php
                     foreach ( $value as $key => $val ) {
                         if ( $key != '__ordering__') {
                             $link = $sharelink[$key]['share_link'].get_the_permalink();
                             printf(
                                 '<li class="%1$s">
                                     <a href="%2$s" target="_blank" rel="alternate" title="%1$s">
-                                        <i class="icon-xstar-%4$s"></i>
+                                        <i class="fab fa-brands fa-%4$s"></i>
                                     </a>
                                 </li>',
                                 esc_attr( $key ),
@@ -717,9 +741,9 @@ function themesflat_social_single() {
                         }
                     }
                 ?>
-            </ul>
-        </div>
-        <?php
+    </ul>
+</div>
+<?php
     endif;
 }
 
@@ -808,4 +832,3 @@ function themesflat_get_page_titles() {
         'title' => $title,
     );
 }
-

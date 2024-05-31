@@ -8,17 +8,18 @@ $themesflat_thumbnail = 'themesflat-blog';
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-post blog-single' ); ?>>
     <!-- begin feature-post single  -->
+    <?php get_template_part( 'tpl/feature-post-single'); ?>
+    <div class="content-post">
+		<?php get_template_part( 'tpl/entry-content/entry-content-meta' );?>			
+	</div>
     <div class="content-post-sigle-title">
         <?php if ( themesflat_get_opt('blog_featured_title') != '' ): ?>
         <h2 class="entry-title"><?php the_title(); ?></h2>
         <?php endif; ?>
     </div>
+<!-- /.entry-post -->
 
-    <?php get_template_part( 'tpl/feature-post-single'); ?>
     <!-- end feature-post single-->
-
-
-
 
     <div class="main-post">
         <div class="entry-content clearfix">

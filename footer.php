@@ -14,16 +14,9 @@
 
 <!-- Start Footer -->
 <div class="footer_background <?php echo themesflat_get_opt('footer_fixed') == 1 ? esc_attr( 'footer-fixed' ) : '' ;?>">
-    <div class="overlay-footer"></div>
 
     <!-- Footer navigation -->
     <?php get_template_part( 'tpl/footer/footer-navigation'); ?>
-
-    <div class="container">
-        <div class="col-md-12">
-            <div class="footer-divide"></div>
-        </div>
-    </div>
 
     <!-- Footer Widget -->
     <?php get_template_part( 'tpl/footer/footer-widgets'); ?>

@@ -1,18 +1,24 @@
-<?php
-
-if (themesflat_get_opt('show_footer_navigation') == 1) : ?>  
-    <div class="footer-navigation"> 
-        <div class="container">
-            <div class="wrap-navigation">
-                <div class="content-left">
-                    <?php get_template_part( 'tpl/footer/brand-ft'); ?>
-                </div>
-                <?php if (themesflat_get_opt('show_footer_navigation_social') == 1) : ?>
-                <div class="content-right">
-                    <?php themesflat_render_social();   ?>
-                </div>
-                <?php endif; ?>
+<?php 
+    $action_box_button_image = themesflat_get_opt('action_box_button_image');
+    $show_action_box = themesflat_get_opt('show_action_box');
+    if ($show_action_box == 1) : 
+    $action_box_text = themesflat_get_opt('action_box_text');
+    $action_box_button_text = themesflat_get_opt('action_box_button_text');
+    $action_box_button_url = themesflat_get_opt('action_box_button_url');
+?>
+<div class="themesflat-action-box">
+    <div class="container">
+        <div class="wrap-action-box">
+            <div class="content-left">
+                <h2 class="heading"><?php echo themesflat_get_opt('action_box_text'); ?></h2>
+            </div>
+            <div class="content-right">
+                <a href="<?php echo esc_url(themesflat_get_opt('action_box_button_url')) ?>"
+                    class="tf-btn-ac button">
+                    <img src="<?php echo esc_url($action_box_button_image); ?>" alt="image">    
+                </a>
             </div>
         </div>
     </div>
+</div>
 <?php endif; ?>

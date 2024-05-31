@@ -53,6 +53,7 @@ function themesflat_thumbnail_url($size){
 // This theme uses wp_nav_menu() in one location.
 register_nav_menus( array(
     'primary' => esc_html__( 'Primary Menu', 'xstar' ),
+    'bottom' => esc_html__( 'Bottom Menu', 'xstar' ),
     'topbar' => esc_html__( 'TopBar Menu', 'xstar' )
 ) );
 
@@ -321,6 +322,7 @@ function themesflat_load_customizer_style() {
     wp_enqueue_style('themesflat-customizer' ); 
     wp_enqueue_style('themesflat-alpha-color-picker', THEMESFLAT_LINK .'assets/css/admin/alpha-color-picker.min.css', false, '1.0.0' );    
     wp_enqueue_script('jquery-ui');
+
     wp_enqueue_script('themesflat-alpha-color-picker', THEMESFLAT_LINK . 'assets/js/admin/alpha-color-picker.min.js', array('wp-color-picker'),'2.1.2',true);
     wp_enqueue_script('themesflat-customizer', THEMESFLAT_LINK .'assets/js/admin/customizer.min.js', array( 'jquery','customize-preview' ), '', true );
     wp_enqueue_script( 'wp-plupload' );
@@ -328,7 +330,7 @@ function themesflat_load_customizer_style() {
 add_action( 'customize_controls_enqueue_scripts', 'themesflat_load_customizer_style' );
 
 function load_style_admin(){
-    wp_enqueue_style( 'icon-xstar', THEMESFLAT_LINK . 'assets/css/icon-xstar.css' );
+    wp_enqueue_style( 'icon-xstar', THEMESFLAT_LINK . 'assets/css/all.min.css' );
 }
 add_action('admin_enqueue_scripts', 'load_style_admin');
 

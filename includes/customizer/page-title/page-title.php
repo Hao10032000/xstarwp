@@ -95,6 +95,46 @@ $wp_customize->add_control(
         )
     )
 );
+//Page Title shape1
+$wp_customize->add_setting(
+    'page_title_shape1',
+    array(
+        'default' => themesflat_customize_default('page_title_shape1'),
+        'sanitize_callback' => 'esc_url_raw',
+    )
+);    
+$wp_customize->add_control(
+    new WP_Customize_Image_Control(
+        $wp_customize,
+        'page_title_shape1',
+        array(
+           'label'          => esc_html__( 'Image Shape1', 'xstar' ),
+           'type'           => 'image',
+           'section'        => 'section_page_title',
+           'priority'       => 10,
+        )
+    )
+);
+//Page Title shape2
+$wp_customize->add_setting(
+    'page_title_shape2',
+    array(
+        'default' => themesflat_customize_default('page_title_shape2'),
+        'sanitize_callback' => 'esc_url_raw',
+    )
+);    
+$wp_customize->add_control(
+    new WP_Customize_Image_Control(
+        $wp_customize,
+        'page_title_shape2',
+        array(
+           'label'          => esc_html__( 'Image Shape 2', 'xstar' ),
+           'type'           => 'image',
+           'section'        => 'section_page_title',
+           'priority'       => 11,
+        )
+    )
+);
 
 $wp_customize->add_setting(
     'page_title_image_size',

@@ -1033,7 +1033,7 @@ li#accordion-panel-shop_panel>h3.accordion-section-title:before {
 
 .themesflat-sortable li.themesflat-sortable-li {
     cursor: move;
-    background: #9e9e9e;
+    background: #0085ba;
     padding: 0 0 0 15px;
     height: 40px;
     line-height: 40px;
@@ -1041,7 +1041,7 @@ li#accordion-panel-shop_panel>h3.accordion-section-title:before {
     border: 1px solid #9e9e9e;
     text-overflow: ellipsis;
     user-select: none;
-    color: #222;
+    color: #fff;
     margin-bottom: 5px;
     margin-top: 0;
     overflow: hidden;
@@ -1055,11 +1055,15 @@ li#accordion-panel-shop_panel>h3.accordion-section-title:before {
 }
 .themesflat-sortable-li.ui-sortable-handle.themesflat-hide {
     background: #fff;
+    color: #222 !important;
 }
-
+.fa.icon-xstar-toggle-on:before {
+    content: "\e915";
+}
 .themesflat-sortable li.themesflat-sortable-li:hover {
     border-color: #9e9e9e;
     background: #fff;
+    color: #222 !important;
     z-index: 10
 }
 
