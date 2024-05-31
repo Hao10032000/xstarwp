@@ -354,10 +354,20 @@ article .bottom-blog {
       &:last-child::after {
         display: none;
       }
+      &.post-author{
+        & .meta-text {
+          color: #fff;
+          span{
+            color: #646464;
+            text-transform: capitalize;
+          }
+        }
+      }
 
       & a,
       & .meta-text {
         color: #646464;
+
       }
 
       & a:hover {

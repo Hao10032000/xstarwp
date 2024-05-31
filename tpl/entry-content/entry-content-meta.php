@@ -24,7 +24,14 @@ echo '<div class="post-meta">';
             echo '</span></span>';
         } elseif ( 'view' == $meta_element ) {
             echo '<span class="item-meta post-view">'. themesflat_get_post_views(get_the_ID()) .'</span>';
-        }
+
+        }elseif ( 'author' == $meta_element ) {
+            echo '<span class="item-meta post-author">';
+                printf('<a class="meta-text" href="%s" title="%s" rel="author">Written by: <span>%s</span> </a>',
+                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) )),
+                esc_attr( sprintf( esc_html__( 'View all posts by %s', 'xstar' ), get_the_author() ) ),get_the_author());
+            echo '</span>';
+                }
     endforeach;
 echo '</div>';
 ?>

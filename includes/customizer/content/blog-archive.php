@@ -124,6 +124,7 @@ $wp_customize->add_control( new themesflat_Control_Drag_And_Drop( $wp_customize,
         'section'   => 'section_content_blog_archive',
         'priority'  => 8,
         'choices' => array(
+            'author'    => esc_html__( 'Author', 'xstar' ),
             'category'    => esc_html__( 'Category', 'xstar' ),
             'date'      => esc_html__( 'Date', 'xstar' ),
             'comment'   => esc_html__( 'Comment', 'xstar' ),

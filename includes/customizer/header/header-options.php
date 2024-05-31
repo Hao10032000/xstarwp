@@ -20,14 +20,6 @@ $wp_customize->add_control( new themesflat_RadioImages($wp_customize,
                 'tooltip'   => esc_html__( 'Header Default','xstar' ),
                 'src'       => THEMESFLAT_LINK . 'images/header-default.png'
             ),
-            'header-02' => array (
-                'tooltip'   => esc_html__( 'Header 02','xstar' ),
-                'src'       => THEMESFLAT_LINK . 'images/header-02.jpg'
-            ),
-            'header-absolute' => array (
-                'tooltip'   => esc_html__( 'Header Style Absolute','xstar' ),
-                'src'       => THEMESFLAT_LINK . 'images/header-absolute.jpg'
-            ),
         ),
     ))
 ); 

@@ -12,13 +12,4 @@ switch ($style_header) {
     case 'header-default':
         get_template_part( 'tpl/header/header-default');
         break;
-    case 'header-02':
-        get_template_part( 'tpl/header/header-02');
-        break;
-    case 'header-absolute':
-        get_template_part( 'tpl/header/header-absolute');
-        break;
-    default:
-        get_template_part( 'tpl/header/header-default');
-        break;
 } 
