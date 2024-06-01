@@ -57,10 +57,38 @@
     .footer-widgets .wrap-widgets.wrap-widgets-3 {
         margin-left: 0;
     }
+    .themesflat-action-box .wrap-action-box .content-left .heading {
+        font-size: 80px;
+        line-height: 90px;
+    }
+    .themesflat-action-box .wrap-action-box .content-right .tf-btn-ac.button img {
+        width: 100px;
+        height: 100px;
+    }
+    .themesflat-action-box .wrap-action-box {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 
 @media only screen and (max-width: 991px) {
+    #themesflat-content {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+    .page-title .shape1,.page-title .shape2{
+        display: none;
+    }
+    .page-title .page-title-heading {
+        font-size: 50px !important;
+        line-height: 65px !important;
+        margin-bottom: 30px !important;
+    }
+    .page-title {
+        padding-top: 150px !important;
+        padding-bottom: 90px !important;
+    }
     .topbar-wrap .inner-wrap {
         justify-content: center;
     }
@@ -73,7 +101,7 @@
 
     .btn-menu,
     header .header-infor-phone {
-        display: block;
+        display: inline-flex;
     }
 
     .page-wrap.sidebar-left .content-area, .page-wrap.sidebar-right .content-area,
@@ -113,6 +141,9 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .themesflat-action-box .wrap-action-box .content-left .heading {
+        font-size: 45px;
+    }
     .topbar-wrap .inner-wrap .list-infor-topbar,
     header .header-infor-phone,
     #header .tf-btn {
@@ -163,5 +194,13 @@
     }
     .blog-post.format-quote .content-post::after {
         font-size: 40px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .wrap-blog-article .blog-post {
+        padding: 20px;
+    }
+    .themesflat-action-box .wrap-action-box {
+        gap: 1rem;
     }
 }
