@@ -15,10 +15,19 @@
   z-index: 10;
 }
 
+.widget:not(:last-child){
+  margin-bottom: 30px;
+}
+.widget .sub-menu {
+  padding-left: 20px;
+}
 
 .footer-widgets {
   & .wrap-widgets.wrap-widgets-1 {
     padding-right: 38px;
+    .wp-block-group{
+      margin-top: 0;
+    }
 
     .custom-text-footer {
       margin-bottom: 28px;

@@ -18,8 +18,8 @@ get_header(); ?>
 										<img src="<?php echo THEMESFLAT_LINK . 'images/404.webp'; ?>" alt="404">
 									</div>
 									<div class="error-404-text">
-										<h1><?php esc_html_e( 'Oh no... We lost this page', 'xstar' ); ?></h1>
-										<p><?php esc_html_e( 'We searched everywhere but couldn’t find what you’re looking for. Let’s find a better place for you to go.', 'xstar' ); ?></p>
+										<h1><?php esc_html_e( 'Oops!... Page Not Found', 'xstar' ); ?></h1>
+										<p><?php esc_html_e( 'The page you are looking for does not exist', 'xstar' ); ?></p>
 									</div>
 									
 									<div class="wrap-button-404">
