@@ -13,10 +13,13 @@
                 <h2 class="heading"><?php echo themesflat_get_opt('action_box_text'); ?></h2>
             </div>
             <div class="content-right">
-                <a href="<?php echo esc_url(themesflat_get_opt('action_box_button_url')) ?>"
+                <?php if(!empty($action_box_button_image)): ?>
+                    <a href="<?php echo esc_url(themesflat_get_opt('action_box_button_url')) ?>"
                     class="tf-btn-ac button">
                     <img src="<?php echo esc_url($action_box_button_image); ?>" alt="image">    
                 </a>
+                <?php endif; ?>
+                
             </div>
         </div>
     </div>

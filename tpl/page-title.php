@@ -19,8 +19,12 @@ $page_title_shape2 = themesflat_get_opt('page_title_shape2');
 <header class="page-header">
     <div class="page-title <?php echo esc_attr($page_title_styles); ?> <?php echo esc_attr($page_title_alignment); ?> <?php echo themesflat_get_opt_elementor('extra_classes_pagetitle'); ?>">
         <div class="overlay"></div>
-        <img src="<?php echo esc_url($page_title_shape1); ?>" alt="image" class="shape1"> 
-        <img src="<?php echo esc_url($page_title_shape2); ?>" alt="image" class="shape2"> 
+        <?php if(!empty($page_title_shape1)): ?>
+              <img src="<?php echo esc_url($page_title_shape1); ?>" alt="image" class="shape1"> 
+        <?php endif; ?>
+        <?php if(!empty($page_title_shape2)): ?>
+            <img src="<?php echo esc_url($page_title_shape2); ?>" alt="image" class="shape2"> 
+        <?php endif; ?> 
         
         <div class="container">
             <div class="row">

@@ -16,7 +16,7 @@ $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
         'priority'  => 1
     ))
 );
-  
+
 // Footer Copyright
 $wp_customize->add_setting(
     'footer_copyright',
@@ -25,12 +25,20 @@ $wp_customize->add_setting(
         'sanitize_callback' => 'themesflat_sanitize_text',
     )
 );
-$wp_customize->add_control(
-    'footer_copyright',
-    array(
-        'label' => esc_html__( 'Copyright', 'xstar' ),
-        'section' => 'section_bottom',
-        'type' => 'textarea',
-        'priority' => 2
-    )
-);
+// Footer Nav
+$wp_customize->add_setting(
+    'show_footer_navigation',
+      array(
+          'sanitize_callback' => 'themesflat_sanitize_checkbox',
+          'default' => themesflat_customize_default('show_footer_navigation'),     
+      )   
+  );
+  $wp_customize->add_control( new themesflat_Checkbox( $wp_customize,
+      'show_footer_navigation',
+      array(
+          'type' => 'checkbox',
+          'label' => esc_html__('Navigation ( OFF | ON )', 'xstar'),
+          'section' => 'section_bottom',
+          'priority' => 2,
+      ))
+  );

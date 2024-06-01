@@ -275,7 +275,7 @@ function themesflat_customize_default($key) {
 		'action_box_button_url' => '#',
 		'action_box_text' => 'LET’S TALK!',
 		'show_action_box'=>'',
-		'action_box_button_image'=>'',
+		'action_box_button_image'=> THEMESFLAT_LINK . 'images/let-arrow.png',
 
 	);
 	return $default[$key];

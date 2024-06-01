@@ -187,16 +187,16 @@ function themesflat_special_excerpt($length) {
 
 function themesflat_available_social_icons() {
     $icons = apply_filters( 'themesflat_available_icons', array(
-        'twitter'        => array( 'iclass' => 'fa-brands fa-x-twitter', 'title' => 'Twitter','share_link' => THEMESFLAT_PROTOCOL . '://twitter.com/intent/tweet?url=' ),
+        'twitter'        => array( 'iclass' => 'fa-brands fa-twitter', 'title' => 'Twitter','share_link' => THEMESFLAT_PROTOCOL . '://twitter.com/intent/tweet?url=' ),
         'facebook'       => array( 'iclass' => 'fa-brands fa-facebook-f', 'title' => 'Facebook','share_link'=> THEMESFLAT_PROTOCOL . '://www.facebook.com/sharer/sharer.php?u=' ),
         'google-plus-g'    => array( 'iclass' => 'fa-brands fa-google-plus-g', 'title' => 'Google Plus','share_link'=> THEMESFLAT_PROTOCOL . '://plus.google.com/share?url=' ),
         'pinterest'      => array( 'iclass' => 'fa-brands fa-pinterest-p', 'title' => 'Pinterest','share_link' => THEMESFLAT_PROTOCOL . '://pinterest.com/pin/create/bookmarklet/?url=' ),
         'instagram'      => array( 'iclass' => 'fa-brands fa-instagram', 'title' => 'Instagram','share_link' => 'https://www.instagram.com/?url=' ),
         'youtube'        => array( 'iclass' => 'fa-brands fa-youtube', 'title' => 'Youtube','share_link' =>'' ),
-        'vimeo'          => array( 'iclass' => 'class="fa-brands fa-vimeo-v', 'title' => 'Vimeo','share_link' =>'' ),
-        'behance'        => array( 'iclass' => 'class="fa-brands fa-behance', 'title' => 'Behance','share_link' =>'' ),
-        'bitcoin'        => array( 'iclass' => 'class="fa-brands fa-bitcoin', 'title' => 'Bitcoin','share_link' =>'' ),
-        'digg'           => array( 'iclass' => 'class="fa-brands fa-digg', 'title' => 'Digg','share_link' =>'http://digg.com/submit?url=' ),
+        'vimeo'          => array( 'iclass' => 'fa-brands fa-vimeo-v', 'title' => 'Vimeo','share_link' =>'' ),
+        'behance'        => array( 'iclass' => 'fa-brands fa-behance', 'title' => 'Behance','share_link' =>'' ),
+        'bitcoin'        => array( 'iclass' => 'fa-brands fa-bitcoin', 'title' => 'Bitcoin','share_link' =>'' ),
+        'digg'           => array( 'iclass' => 'fa-brands fa-digg', 'title' => 'Digg','share_link' =>'http://digg.com/submit?url=' ),
         'skype'          => array( 'iclass' => 'fa-brands fa-skype', 'title' => 'Skype','share_link' => THEMESFLAT_PROTOCOL . '://web.skype.com/share?url='),
         'slack'          => array( 'iclass' => 'fa-brands fa-slack', 'title' => 'Slack','share_link' => ''),
         'spotify'        => array( 'iclass' => 'fa-brands fa-spotify', 'title' => 'Spotify','share_link' => ''),
