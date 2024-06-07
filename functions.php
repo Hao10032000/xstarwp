@@ -207,8 +207,6 @@ require_once( THEMESFLAT_DIR . 'includes/controls/styler_slider.php');
 require_once( THEMESFLAT_DIR . 'includes/controls/draganddrop-controls.php');
 require_once( THEMESFLAT_DIR . 'includes/elementor-options/elementor-options.php');
 require_once( THEMESFLAT_DIR . 'includes/elementor-options/elementor-functions.php');
-require_once( THEMESFLAT_DIR . 'includes/less/lessc.inc.php');
-require_once( THEMESFLAT_DIR . 'includes/less/wp-less.php');
 
 function themesflat_get_style($style) {
     return str_replace('italic', 'i', $style);

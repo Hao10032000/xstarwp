@@ -384,6 +384,7 @@ article .bottom-blog {
     & .item-meta {
       .flex-center;
       color: #646464;
+      flex-wrap: wrap;
 
       &::after {
         content: '';
@@ -458,6 +459,8 @@ article .bottom-blog {
       img {
         transition: .3s linear;
         width: 100%;
+        min-height: 425px;
+        object-fit: cover;
       }
     }
   }
@@ -583,6 +586,7 @@ article .bottom-blog {
 
   .entry-title {
     margin-bottom: 21px;
+    word-break: break-word;
   }
 
   .main-post {
@@ -660,7 +664,8 @@ article .bottom-blog {
     font-weight: normal;
     line-height: 28px;
   }
-  .icon{
+
+  .icon {
     display: none
   }
 
@@ -714,9 +719,10 @@ article .bottom-blog {
     .flex-center;
 
     & .post-navigation {
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 30px;
       }
+
       width: 100%;
       background: #161616;
       padding: 1.7rem 1.75rem;
@@ -766,20 +772,25 @@ article .bottom-blog {
       }
     }
   }
-  & .nav-links-next-prev{
+
+  & .nav-links-next-prev {
     display: flex;
     width: 100%;
     margin-bottom: 25px;
-    .previous-post{
+
+    .previous-post {
       width: 50%;
-      i{
+
+      i {
         margin-right: 10px;
       }
     }
-    .next-post{
+
+    .next-post {
       width: 50%;
       text-align: right;
-      i{
+
+      i {
         margin-left: 10px;
       }
     }
@@ -903,7 +914,7 @@ article .bottom-blog {
     content: "\f061";
     font-family: "FontAwesome";
     vertical-align: middle;
-    margin-left: 2px;
+    margin-left: 10px;
   }
 }
 
@@ -1083,16 +1094,17 @@ article .bottom-blog {
 
 .comment-respond input[type="submit"] {
   border-radius: 8px;
-    padding: 12px 26px;
-    background: var(--theme-primary-color);
-    transition: all 0.5s;
-    border: 1px solid var(--theme-primary-color);
-    font-weight: 600;
-    color: #000;
-    &:hover{
-      background: #fff !important;
-      color: #000 !important;
-    }
+  padding: 12px 26px;
+  background: var(--theme-primary-color);
+  transition: all 0.5s;
+  border: 1px solid var(--theme-primary-color);
+  font-weight: 600;
+  color: #000;
+
+  &:hover {
+    background: #fff !important;
+    color: #000 !important;
+  }
 }
 
 .comment-list-wrap {
@@ -1100,7 +1112,7 @@ article .bottom-blog {
 }
 
 .comment-respond {
-  
+
 
   & input[type="text"],
   & input[type="email"],
